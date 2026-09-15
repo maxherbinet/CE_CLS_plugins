@@ -1,1 +1,0 @@
-"""CRE Elastic Plugin Package."""

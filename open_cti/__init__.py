@@ -1,1 +1,0 @@
-"""CTE OpenCTI Plugin Package."""

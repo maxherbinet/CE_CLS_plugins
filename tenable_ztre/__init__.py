@@ -1,1 +1,0 @@
-"""CRE Tenable Plugin Package."""

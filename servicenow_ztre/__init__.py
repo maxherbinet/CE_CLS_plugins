@@ -1,1 +1,0 @@
-"""CRE ServiceNow plugin."""

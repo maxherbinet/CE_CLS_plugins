@@ -1,1 +1,0 @@
-"""CTE Darktrace Plugin Package."""

@@ -1,1 +1,0 @@
-"""CTE Imperva Plugin Package."""

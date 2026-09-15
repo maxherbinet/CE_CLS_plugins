@@ -1,1 +1,0 @@
-"""CRE Qualys Plugin Package."""

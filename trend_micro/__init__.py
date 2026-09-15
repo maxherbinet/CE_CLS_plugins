@@ -1,1 +1,0 @@
-"""Trend Micro Plugin."""

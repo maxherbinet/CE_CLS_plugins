@@ -1,1 +1,0 @@
-"""CTE Tanium Plugin Package."""

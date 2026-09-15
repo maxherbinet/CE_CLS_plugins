@@ -1,1 +1,0 @@
-"""CRE Proofpoint plugin."""

@@ -1,1 +1,0 @@
-"""ExtraHop Reveal(x) 360 Plugin Package"""

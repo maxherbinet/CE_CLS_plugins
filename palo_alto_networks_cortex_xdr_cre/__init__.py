@@ -1,1 +1,0 @@
-"""CRE Palo Alto Cortex XDR Plugin Package"""
