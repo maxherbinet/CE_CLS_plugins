@@ -317,14 +317,11 @@ class CortexXDRPlugin(PluginBase):
                 message=f"{err_msg} Check logs for more details.",
             )
 
-    def validate(self, configuration: dict, value=None) -> ValidationResult:
+    def validate(self, configuration: dict) -> ValidationResult:
         """Validate the plugin configuration parameters.
 
         Args:
             configuration (dict): Configuration parameters dictionary.
-            value: Unused by this plugin. Accepted for compatibility
-            with the base class's validate(configuration, value)
-            signature.
 
         Returns:
             ValidationResult: Result with success flag and message.
