@@ -1,1 +1,0 @@
-"""CommVault Plugin for Netskope."""

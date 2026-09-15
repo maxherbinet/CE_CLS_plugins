@@ -1,1 +1,0 @@
-"""Syslog Service plugin."""

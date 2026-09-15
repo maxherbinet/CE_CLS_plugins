@@ -1,1 +1,0 @@
-"""CRE CyberArk Plugin"""

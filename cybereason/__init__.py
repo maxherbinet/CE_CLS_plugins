@@ -1,1 +1,0 @@
-"""Cybereason Plugin Package."""

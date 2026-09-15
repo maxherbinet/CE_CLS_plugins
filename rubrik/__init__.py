@@ -1,1 +1,0 @@
-"""CTE Rubrik Plugin Package."""

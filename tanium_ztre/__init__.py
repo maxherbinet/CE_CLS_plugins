@@ -1,1 +1,0 @@
-"""CRE Tanium Plugin Package."""

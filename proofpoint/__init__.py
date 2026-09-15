@@ -1,1 +1,0 @@
-"""Proofpoint plugin package."""

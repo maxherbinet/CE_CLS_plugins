@@ -1,1 +1,0 @@
-"""CRE Forescout Plugin Package."""

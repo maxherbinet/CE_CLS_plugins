@@ -1,1 +1,0 @@
-"""CRE CrowdStrike Plugin Package."""

@@ -1,1 +1,0 @@
-"""CTE CrowdStrike Plugin Package."""
