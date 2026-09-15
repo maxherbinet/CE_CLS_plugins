@@ -60,6 +60,20 @@ def test_validate_rejects_missing_api_key(make_plugin):
     assert "API Key" in result.message
 
 
+def test_validate_accepts_base_class_signature(
+    make_plugin, fake_response, mocker
+):
+    """Regression test: the real CLS PluginBase.validate() abstract
+    method signature is validate(self, configuration, value) - two
+    positional args. Calling with only one would raise TypeError if
+    this plugin's override didn't also accept a second parameter."""
+    plugin = make_plugin()
+    mocker.patch("requests.request", return_value=fake_response(mocker, 200))
+    result = plugin.validate(plugin.configuration, None)
+
+    assert result.success is True
+
+
 def test_validate_rejects_invalid_compression(make_plugin):
     plugin = make_plugin({"compression": "brotli"})
     result = plugin.validate(plugin.configuration)

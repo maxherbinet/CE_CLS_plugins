@@ -77,16 +77,24 @@ def make_plugin(manifest, mappings, common_config, mocker):
     def _make(config_overrides=None):
         configuration = dict(common_config)
         configuration.update(config_overrides or {})
-        return CortexXDRPlugin(
+        # Matches the real CLS PluginBase.__init__ signature exactly
+        # (storage/last_run_at are required, no defaults; notifier and
+        # proxy are not constructor params - they're set below to
+        # mirror how Cloud Exchange's core injects them post-init).
+        plugin = CortexXDRPlugin(
             "test-config",
             configuration=configuration,
+            storage={},
+            last_run_at=None,
             logger=StubLogger(),
+            use_proxy=True,
+            ssl_validation=True,
             source="test-source",
             mappings=mappings,
-            notifier=mocker.MagicMock(),
-            proxy={},
-            ssl_validation=True,
         )
+        plugin.notifier = mocker.MagicMock()
+        plugin.proxy = {}
+        return plugin
 
     return _make
 
