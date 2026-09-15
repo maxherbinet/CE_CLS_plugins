@@ -1,0 +1,5 @@
+{
+    "name": "Palo Alto Cortex XDR Default Mappings",
+    "jsonData": "{\"delimiter\": \"|\", \"cortex_xdr_map_version\": \"1.0.0\", \"cef_version\": \"0\", \"validator\": \"valid_extensions.csv\", \"taxonomy\": {\"json\": {\"alerts\": {\"anomaly\": [], \"dlp\": [], \"malware\": [], \"policy\": [], \"Compromised Credential\": [], \"Legal Hold\": [], \"Malsite\": [], \"Quarantine\": [], \"Remediation\": [], \"Security Assessment\": [], \"Watchlist\": [], \"uba\": [], \"ctep\": []}, \"events\": {\"application\": [], \"audit\": [], \"infrastructure\": [], \"page\": [], \"network\": [], \"incident\": [], \"endpoint\": []}}}}",
+    "isDefault": true
+}

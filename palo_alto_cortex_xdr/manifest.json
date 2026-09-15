@@ -1,0 +1,57 @@
+{
+    "name": "Palo Alto Cortex XDR",
+    "id": "palo_alto_cortex_xdr",
+    "version": "1.0.0",
+    "mapping": "Palo Alto Cortex XDR Default Mappings",
+    "description": "This plugin supports the ingestion of Alerts (DLP, Malware, Policy, Compromised Credential, Malsite, Quarantine, Remediation, Security Assessment, Watchlist, UBA, and CTEP) and Events (Page, Application, Audit, Infrastructure, Network, Incident, and Endpoint) to a Palo Alto Cortex XDR HTTP Log Collector. This plugin only supports sharing raw JSON data to Cortex XDR. Note: This plugin does not support sending WebTx logs to Cortex XDR.",
+    "module": "CLS",
+    "netskope": false,
+    "types": [
+        "alerts",
+        "events"
+    ],
+    "configuration": [
+        {
+            "label": "HTTP Log Collector URL",
+            "key": "api_url",
+            "type": "text",
+            "default": "",
+            "mandatory": true,
+            "description": "The HTTP POST URL for your Cortex XDR HTTP Log Collector. Obtained from Settings > Data Sources & Integrations > (your HTTP collector) in Cortex XDR. Example: https://api-<tenant external URL>/logs/v1/event"
+        },
+        {
+            "label": "API Key",
+            "key": "api_key",
+            "type": "password",
+            "default": "",
+            "mandatory": true,
+            "description": "The token generated for your Cortex XDR HTTP Log Collector. Sent as-is in the Authorization header (no 'Bearer' prefix)."
+        },
+        {
+            "label": "Compression",
+            "key": "compression",
+            "type": "choice",
+            "choices": [
+                {
+                    "key": "Uncompressed",
+                    "value": "uncompressed"
+                },
+                {
+                    "key": "Gzip",
+                    "value": "gzip"
+                }
+            ],
+            "default": "uncompressed",
+            "mandatory": true,
+            "description": "Must exactly match the 'Compression' setting configured on your Cortex XDR HTTP Log Collector (Uncompressed or Gzip). A mismatch will cause every push to fail with an HTTP 500 error from Cortex XDR."
+        },
+        {
+            "label": "Log Source Identifier",
+            "key": "log_source_identifier",
+            "type": "text",
+            "default": "Netskope Cloud Exchange",
+            "mandatory": true,
+            "description": "Value added as a 'log_source_identifier' field to every alert and event sent to Cortex XDR, to help identify the source in XQL Search. Default value is Netskope Cloud Exchange."
+        }
+    ]
+}
